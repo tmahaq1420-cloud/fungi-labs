@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة درس تطبيقي - تنوع الفطريات وبيئتها</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1b4332, #2d6a4f, #40916c);
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 35px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        h1 {
+            color: #ffd166;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 21px;
+            margin: 15px 0;
+            color: #d8f3dc;
+        }
+        .intro-text {
+            font-size: 15px;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: #e9ecef;
+        }
+        .interactive-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .person-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid #ffd166;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .person-btn:hover {
+            background: #ffd166;
+            color: #1b4332;
+            transform: scale(1.02);
+        }
+        .message-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-right: 4px solid #ffd166;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 15px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+            text-align: right;
+            color: #fff3b0;
+        }
+        .details-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: right;
+        }
+        .details-box p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+        .join-btn {
+            display: inline-block;
+            background: #ffb703;
+            color: #111;
+            font-weight: bold;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(255, 183, 3, 0.4);
+            transition: all 0.3s ease;
+        }
+        .join-btn:hover {
+            background: #ffd166;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(255, 183, 3, 0.6);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #ced4da;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>💕✨ دعوة درس تطبيقي ✨💕</h1>
+        <h2>🍄 تنوع الفطريات وبيئتها 🍄</h2>
+        
+        <div class="intro-text">
+            لمسة واحدة تصنع الفرق! اضغطي على أسماء القيادات التعليمية أدناه لاكتشاف رسائل الترحيب والمفاجآت التفاعلية 💫.
+        </div>
+
+        <div class="interactive-buttons">
+            <!-- المعلمة -->
+            <button class="person-btn" onclick="showMessage('teacher')">👩‍🏫 المعلمة المبدعة: مها القحطاني</button>
+            <div id="msg-teacher" class="message-box">✨ أهلاً بكم في رحلتي المعرفية الممتعة لاكتشاف عالم الفطريات وأسرار بيئتها! يسعدني جداً حضوركم وتواجدكم الراقي معي اليوم.</div>
+
+            <!-- المشرفة -->
+            <button class="person-btn" onclick="showMessage('supervisor')">📌 المشرفة التربوية: أ. رحاب الدراج</button>
+            <div id="msg-supervisor" class="message-box">🌟 حضور الدعم والتوجيه يضفي قيمة كبرى لهذا اللقاء التطبيقي المتميز. سعداء جداً بمتابعتكم المستمرة للتميز والإبداع!</div>
+
+            <!-- المديرة -->
+            <button class="person-btn" onclick="showMessage('principal')">🏫 قائدة المدرسة: أ. نوره الصويلح</button>
+            <div id="msg-principal" class="message-box">💡 بوركت الجهود المثمرة نحو التميز والإبداع التعليمي. نرحب بالجميع في صرحنا المتميز وكل التوفيق للمعلمة المبدعة!</div>
+        </div>
+
+        <div class="details-box">
+            <p>📅 <strong>الموعد:</strong> يوم الخميس</p>
+            <p>⏰ <strong>الحصة:</strong> الرابعة (الساعة 10:40 صباحاً)</p>
+        </div>
+
+        <a href="https://me.classera.com/vcrs/teams_launch/aij9PnDYkq61XbVEGOlaTgC1E9" class="join-btn" target="_blank">🚀 اضغط هنا للدخول المباشر للحصة</a>
+
+        <div class="footer">
+            نتشرف بحضوركم وتواجدكم معنا لتحقيق أروع تجربة تفاعلية! ✨
+        </div>
+    </div>
+
+    <script>
+        function showMessage(person) {
+            // إخفاء جميع الرسائل أولاً
+            document.getElementById('msg-teacher').style.display = 'none';
+            document.getElementById('msg-supervisor').style.display = 'none';
+            document.getElementById('msg-principal').style.display = 'none';
+
+            // إظهار الرسالة المطلوبة
+            const selectedMsg = document.getElementById('msg-' + person);
+            selectedMsg.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
